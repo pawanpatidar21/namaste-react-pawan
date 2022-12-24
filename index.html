@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <diV id="root"></diV>
+    <diV id="root">No renderd</diV>
 </body>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -24,14 +24,28 @@
     // root.appendChild(heading)
     // console.log(heading, root)
 
-    const heading = React.createElement("h1", {
+    const heading1 = React.createElement("h1", {
         id: "container",
 
-    }, "namaste javascript pawan")
+    }, "namaste javascript pawan1")
+    const heading2 = React.createElement("h1", {
+        id: "container",
+
+    }, "namaste javascript pawan2")
+    const heading3 = React.createElement("h1", {
+        id: "container",
+
+    }, "namaste javascript pawan3")
+    const container = React.createElement("div", {
+        id: "container",
+
+    }, [heading1, heading2, heading3])
+
+
 
     const root = ReactDOM.createRoot(document.getElementById("root"))
 
-    root.render(heading)
+    root.render(container)
 </script>
 
 </html>
